@@ -1,0 +1,43 @@
+{
+  "name": "Order",
+  "fields": [
+    {
+      "fieldName": "orderDate",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "shipDate",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "shipState",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "shipAddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "shipCost",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "customer",
+      "otherEntityRelationshipName": "customerLevel",
+      "relationshipName": "customer"
+    }
+  ],
+  "entityTableName": "jhi_order",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20220213130946"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "OrderItems",
+  "fields": [
+    {
+      "fieldName": "quantity",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "unitPrice",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "order",
+      "otherEntityRelationshipName": "orderItems",
+      "relationshipName": "orderItemsOrder"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "book",
+      "otherEntityRelationshipName": "orderItems",
+      "relationshipName": "orderItemsBook"
+    }
+  ],
+  "entityTableName": "order_items",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20220213130948"
+}

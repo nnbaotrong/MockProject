@@ -1,0 +1,75 @@
+{
+  "name": "Book",
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "bookImage1",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    },
+    {
+      "fieldName": "bookImage2",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    },
+    {
+      "fieldName": "bookImage3",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    },
+    {
+      "fieldName": "cost",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "pubDate",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "inventoryNumber",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "productUpdate",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "discount",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "author",
+      "otherEntityRelationshipName": "job",
+      "relationshipName": "authorBook",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "type",
+      "otherEntityRelationshipName": "typeBook",
+      "relationshipName": "type"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "publisher",
+      "otherEntityRelationshipName": "publisherBook",
+      "relationshipName": "publisher"
+    }
+  ],
+  "entityTableName": "book",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20220213130942"
+}

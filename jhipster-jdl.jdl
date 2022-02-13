@@ -1,0 +1,74 @@
+
+entity Book {
+	title String,
+	bookImage1 ImageBlob,
+    bookImage2 ImageBlob,
+    bookImage3 ImageBlob,
+    cost String,
+    pubDate ZonedDateTime,
+    inventoryNumber Integer,
+    productUpdate ZonedDateTime,
+    discount Integer,
+    
+}
+
+entity Type {
+	typeName String,
+}
+
+entity Publisher {
+	name String,
+    address String,
+    phoneNumber Integer
+}
+
+entity Customer {
+	firstName String,
+	lastName String,
+    birthday ZonedDateTime,
+    phoneNumber String,
+    address String,
+    information String,
+    userName String,
+    password String
+}
+
+entity Order {
+	orderDate ZonedDateTime,
+    shipDate ZonedDateTime,
+    shipState Boolean,
+    shipAddress String,
+    shipCost Integer,
+}
+
+entity Author {
+	firstName String,
+	lastName String,
+}
+
+entity OrderItems {
+	quantity Integer,
+	unitPrice Integer,
+}
+
+relationship OneToMany {
+	  Customer{customerLevel} to Order
+}
+relationship OneToMany {
+	 Type{typeBook} to Book
+}
+relationship OneToMany {
+	 Publisher{publisherBook} to Book
+}
+
+relationship ManyToOne {
+	OrderItems{OrderItemsOrder} to Order
+    OrderItems{OrderItemsBook} to Book
+}
+relationship ManyToMany {
+	Book{AuthorBook} to Author{job}
+}
+
+paginate * with pagination
+dto * with mapstruct
+service all with serviceImpl

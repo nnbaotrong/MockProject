@@ -1,0 +1,27 @@
+{
+  "mockProjectApp": {
+    "orderItems": {
+      "home": {
+        "title": "Order Items",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Order Items",
+        "createOrEditLabel": "Create or edit a Order Items",
+        "notFound": "No Order Items found"
+      },
+      "created": "A new Order Items is created with identifier {{ param }}",
+      "updated": "A Order Items is updated with identifier {{ param }}",
+      "deleted": "A Order Items is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Order Items {{ id }}?"
+      },
+      "detail": {
+        "title": "Order Items"
+      },
+      "id": "ID",
+      "quantity": "Quantity",
+      "unitPrice": "Unit Price",
+      "orderItemsOrder": "Order Items Order",
+      "orderItemsBook": "Order Items Book"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Author",
+  "fields": [
+    {
+      "fieldName": "firstName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastName",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "book",
+      "otherEntityRelationshipName": "authorBook",
+      "relationshipName": "job",
+      "ownerSide": false
+    }
+  ],
+  "entityTableName": "author",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20220213130947"
+}

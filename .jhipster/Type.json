@@ -1,0 +1,27 @@
+{
+  "name": "Type",
+  "fields": [
+    {
+      "fieldName": "typeName",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "book",
+      "otherEntityRelationshipName": "type",
+      "relationshipName": "typeBook"
+    }
+  ],
+  "entityTableName": "type",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20220213130943"
+}
